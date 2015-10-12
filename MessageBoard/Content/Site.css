@@ -1,1 +1,24 @@
-﻿/*# sourceMappingURL=Site.css.map */
+﻿.message {
+  border: 1px solid #aaaaaa;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  background: #eaeaea;
+  margin-left: 10px;
+}
+.message .title {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #aaaaaa;
+}
+.message .reply {
+  border-top: 1px solid #aaaaaa;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+.message .reply .created {
+  font-size: 9px;
+  margin-left: 10px;
+  text-shadow: 2px 2px 3px #aaaaaa;
+}
+/*# sourceMappingURL=Site.css.map */

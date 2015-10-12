@@ -1,1 +1,28 @@
-﻿
+﻿@baseMessageColor: #aaa;
+
+.message {
+    border: 1px solid @baseMessageColor;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background: lighten(@baseMessageColor,25%);
+    margin-left: 10px;
+
+    .title {
+        font-size: 20px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px @baseMessageColor;
+    }
+
+    .reply {
+        border-top: 1px solid @baseMessageColor;
+        margin-top: 5px;
+        margin-left: 15px;
+
+        .created {
+            font-size: 9px;
+            margin-left: 10px;
+            text-shadow: 2px 2px 3px @baseMessageColor;
+        }
+    }
+}

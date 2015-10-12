@@ -58,11 +58,11 @@ namespace MessageBoard
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions() {
+                ClientId = "1089083592771-j6o9hiptlso8ltd17agc62q1i91bhtq1.apps.googleusercontent.com",
+                ClientSecret = "PI20h8XH9NCImej0dcBqp6Uj"
+            });
+            
         }
     }
 }

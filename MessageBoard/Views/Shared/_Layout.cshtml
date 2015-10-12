@@ -83,45 +83,10 @@
                                 <div id="ddtopmenubar" class="mattblackmenu">
                                     <!-- Main navigation -->
                                     <ul>
-                                        <!-- Add rel="ddsubmenu{count}" to main menu -->
-                                        <li>
-                                            <a href="index.html" rel="ddsubmenu1">Home</a>
-                                            <!-- Sub navigation, A -->
-                                            <!-- Add id "ddsubmenu{count} and class "ddsubmenustyle" -->
-                                            <ul id="ddsubmenu1" class="ddsubmenustyle">
-                                                <li><a href="index-slider.html">With Slider</a></li>
-                                                <li><a href="full-width.html">Full Width</a></li>
-                                            </ul>
-                                        </li>
-                                        <!-- Main navigation -->
-                                        <li>
-                                            <a href="blog.html" rel="ddsubmenu2">Blog</a>
-                                            <!-- Sub Navigation -->
-                                            <ul id="ddsubmenu2" class="ddsubmenustyle">
-                                                <li><a href="blog-single.html">Blog Single</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="portfolio.html" rel="ddsubmenu2">Portfolio</a>
-                                            <!-- Sub navigation -->
-                                            <ul id="ddsubmenu2" class="ddsubmenustyle">
-                                                <li><a href="portfolio-big.html">Portfolio #2</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="contact-us.html">Contact Us</a></li>
-                                        <li>
-                                            <a href="#" rel="ddsubmenu3">Nav Level #1</a>
-                                            <!-- Sub navigation -->
-                                            <ul id="ddsubmenu3" class="ddsubmenustyle">
-                                                <li>
-                                                    <a href="#">Nav Level #2</a>
-                                                    <ul>
-                                                        <li><a href="#">Nav Level #3</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
+                                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                                        <li>@Html.ActionLink("My Messages", "MyMessages", "Home")</li>
                                     </ul>
                                 </div>
                             </div>
@@ -210,7 +175,7 @@
             <div class="row">
                 <div class="span12">
                     <!-- Copyright information -->
-                    <div class="fpadd">Copyright &copy; 2012 - <a href="#">Your Site</a> / <a href="#">Disclaimer</a> / <a href="#">Privacy Policy</a></div>
+                    <div class="fpadd">Copyright &copy; 2015 - <a href="#">MessageBoard</a> / <a href="#">Disclaimer</a> / <a href="#">Privacy Policy</a></div>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -226,7 +191,7 @@
     <script type="text/javascript" src="scripts/flexslider.js"></script>
     <script type="text/javascript" src="scripts/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="scripts/custom.js"></script>
-
+    <link href="~/Content/Site.css" rel="stylesheet" /> 
     @RenderSection("scripts", required: false)
 </body>
 </html>
