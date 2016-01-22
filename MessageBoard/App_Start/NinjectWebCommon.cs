@@ -4,11 +4,13 @@
 namespace MessageBoard.App_Start {
     using System;
     using System.Web;
+    using System.Web.Http;
     using MessageBoard.Data;
     using MessageBoard.Services;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Common;
+    using WebApiContrib.IoC.Ninject;
 
     public static class NinjectWebCommon {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
@@ -40,6 +42,9 @@ namespace MessageBoard.App_Start {
                 kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
 
                 RegisterServices(kernel);
+
+                GlobalConfiguration.Configuration.DependencyResolver = new NinjectResolver(kernel);
+
                 return kernel;
             } catch {
                 kernel.Dispose();
