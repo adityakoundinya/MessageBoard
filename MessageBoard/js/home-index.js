@@ -1,5 +1,15 @@
-﻿var app = angular.module("messageBoard", []);
-app.controller("homeIndexController", function ($scope, $http) {
+﻿
+var app = angular.module('homeIndex', ['ngRoute']);
+
+app.config(['$routeProvider', function ($routeProvider) {
+    $routeProvider.when("/", {
+        controller: "topicsController",
+        templateUrl: "/templates/topicsView.html"
+    });
+    $routeProvider.otherwise({ redirectTo: "/" });
+}]);
+
+app.controller('topicsController', function ($scope, $http) {
     $scope.data = [];
     $scope.isBusy = true;
 
@@ -14,3 +24,4 @@ app.controller("homeIndexController", function ($scope, $http) {
         $scope.isBusy = false;
     });
 });
+
